@@ -9,10 +9,12 @@ import ProjectShowcase from '@/components/ProjectShowcase';
 import LiveProjects from '@/components/LiveProjects';
 import Now from '@/components/Now';
 import Footer from '@/components/Footer';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const Index = () => {
   return (
     <div className="min-h-screen gradient-bg">
+      <ThemeToggle />
       <Header />
       <StatsOverview />
       <DifficultyChart />
