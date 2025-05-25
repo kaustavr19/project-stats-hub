@@ -2,6 +2,10 @@
 
 A personal dashboard designed to showcase software development projects, GitHub activity, contest statistics, and current endeavors. This project provides a centralized view of a developer's professional and personal coding activities.
 
+## Live Demo
+
+🚀 You can check out the live deployment of this project here: **[project-stats-hub.vercel.app](https://project-stats-hub.vercel.app/)** 🚀
+
 ## Features
 
 *   **GitHub Statistics:** Displays up-to-date statistics from GitHub, including repositories, contributions, and activity.
