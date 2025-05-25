@@ -50,14 +50,6 @@ To get a local copy up and running, follow these simple steps:
     ```
     This will start the development server, typically at `http://localhost:5173`.
 
-## Screenshots
-
-*(Consider adding a few screenshots here to showcase your dashboard!)*
-
-## Deployment
-
-This project can be deployed using various platforms. The original project template suggests deployment via [Lovable.dev](https://lovable.dev/).
-
 ---
 
 This README provides a comprehensive overview of the project.
