@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 
 const ProjectShowcase = () => {
   const pinnedProjects = [
@@ -37,35 +37,29 @@ const ProjectShowcase = () => {
 
   const openSourceProjects = [
     {
-      title: 'React Query Utils',
-      description: 'Utility hooks and components for React Query',
-      role: 'Maintainer',
-      contributions: '25+ commits',
-      github: 'https://github.com/community/react-query-utils',
-      stars: '1.2k',
+      title: 'Eugenie.ai',
+      description: 'Dashboard & charting features',
+      icon: '🛠️',
+      github: 'https://github.com/community/eugenie-ai',
     },
     {
-      title: 'LeetCode CLI',
-      description: 'Command-line tool for practicing LeetCode problems',
-      role: 'Contributor',
-      contributions: '12 PRs merged',
-      github: 'https://github.com/community/leetcode-cli',
-      stars: '3.5k',
+      title: 'OpenMined',
+      description: 'Contributor to PySyft',
+      icon: '🌍',
+      github: 'https://github.com/OpenMined/PySyft',
     },
     {
-      title: 'Dev Portfolio Template',
-      description: 'Modern portfolio template for developers',
-      role: 'Core Contributor',
-      contributions: '8 PRs merged',
-      github: 'https://github.com/community/dev-portfolio',
-      stars: '890',
+      title: 'EducationStack',
+      description: 'Accessibility features and bug fixes',
+      icon: '🎓',
+      github: 'https://github.com/community/education-stack',
     },
   ];
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-6xl mx-auto space-y-12">
-        {/* Pinned Projects */}
+        {/* Featured Projects */}
         <div className="space-y-6">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
@@ -116,31 +110,25 @@ const ProjectShowcase = () => {
         {/* Open Source Contributions */}
         <div className="space-y-6">
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4">Open Source Contributions</h2>
-            <p className="text-muted-foreground">Contributing to the developer community</p>
+            <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3">
+              🤝 Open Source Contributions
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {openSourceProjects.map((project, index) => (
-              <Card key={index} className="card-hover">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <CardTitle className="text-lg">{project.title}</CardTitle>
-                    <Badge variant="secondary">{project.role}</Badge>
+              <Card key={index} className="card-hover bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 border-0">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-2xl">{project.icon}</span>
+                      <Github size={20} className="text-muted-foreground" />
+                    </div>
                   </div>
-                  <p className="text-sm text-muted-foreground">{project.description}</p>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">{project.contributions}</span>
-                    <span className="text-muted-foreground">⭐ {project.stars}</span>
+                  <div className="mt-4 space-y-2">
+                    <h3 className="font-bold text-lg">{project.title}</h3>
+                    <p className="text-muted-foreground text-sm">{project.description}</p>
                   </div>
-                  <Button size="sm" variant="outline" className="w-full" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github size={16} className="mr-1" />
-                      View Project
-                    </a>
-                  </Button>
                 </CardContent>
               </Card>
             ))}

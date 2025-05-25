@@ -22,11 +22,36 @@ const GitHubStats = () => {
   ];
 
   const languages = [
-    { name: 'JavaScript', percentage: 35, color: '#f7df1e' },
-    { name: 'Python', percentage: 28, color: '#3776ab' },
-    { name: 'TypeScript', percentage: 20, color: '#3178c6' },
-    { name: 'Java', percentage: 10, color: '#ed8b00' },
-    { name: 'Other', percentage: 7, color: '#6b7280' },
+    { 
+      name: 'JavaScript', 
+      percentage: 35, 
+      color: '#f7df1e',
+      icon: '⚡'
+    },
+    { 
+      name: 'Python', 
+      percentage: 28, 
+      color: '#3776ab',
+      icon: '🐍'
+    },
+    { 
+      name: 'TypeScript', 
+      percentage: 20, 
+      color: '#3178c6',
+      icon: '📘'
+    },
+    { 
+      name: 'Java', 
+      percentage: 10, 
+      color: '#ed8b00',
+      icon: '☕'
+    },
+    { 
+      name: 'Other', 
+      percentage: 7, 
+      color: '#6b7280',
+      icon: '🔧'
+    },
   ];
 
   return (
@@ -83,7 +108,8 @@ const GitHubStats = () => {
                 {languages.map((lang, index) => (
                   <div key={index} className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center space-x-3">
+                        <span className="text-lg">{lang.icon}</span>
                         <div 
                           className="w-3 h-3 rounded-full"
                           style={{ backgroundColor: lang.color }}

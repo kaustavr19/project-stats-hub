@@ -3,68 +3,34 @@ import React from 'react';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const Header = () => {
-  const nowItems = [
-    {
-      emoji: '🔭',
-      label: 'Working on',
-      description: 'A GPT-powered aptitude test coach'
-    },
-    {
-      emoji: '📚',
-      label: 'Learning',
-      description: 'Rust, WebGPU, Behavioral Design'
-    },
-    {
-      emoji: '✍️',
-      label: 'Writing',
-      description: 'A Medium article on AI in UX'
-    },
-    {
-      emoji: '🎯',
-      label: 'Goal',
-      description: 'Contribute to OSS every week'
-    }
-  ];
-
   return (
-    <header className="py-8 px-4 sm:px-6 lg:px-8">
+    <header className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 text-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center space-y-6">
-          <div className="space-y-2">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 bg-clip-text text-transparent">
-              Developer Portfolio
+        <div className="text-center space-y-8">
+          <div className="space-y-4">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
+              Kaustav Roy
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Code. Solve. Create. Building scalable solutions and contributing to open source.
+            <p className="text-xl sm:text-2xl text-blue-100">
+              Code. Contribute. Create.
+            </p>
+            <p className="text-lg text-blue-200 max-w-3xl mx-auto leading-relaxed">
+              Developer passionate about solving problems, building products, and contributing 
+              to open source. Currently exploring AI-enhanced learning tools and writing code 
+              that scales empathy.
             </p>
           </div>
           
-          <div className="flex justify-center space-x-6">
-            <a href="https://github.com" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Github size={24} />
+          <div className="flex justify-center space-x-8">
+            <a href="https://github.com" className="text-blue-200 hover:text-white transition-colors">
+              <Github size={28} />
             </a>
-            <a href="https://linkedin.com" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Linkedin size={24} />
+            <a href="https://linkedin.com" className="text-blue-200 hover:text-white transition-colors">
+              <Linkedin size={28} />
             </a>
-            <a href="https://twitter.com" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Twitter size={24} />
+            <a href="https://twitter.com" className="text-blue-200 hover:text-white transition-colors">
+              <Twitter size={28} />
             </a>
-          </div>
-
-          {/* Now Section */}
-          <div className="mt-8 bg-card/50 backdrop-blur-sm rounded-lg p-6 border">
-            <h2 className="text-2xl font-bold mb-6">📌 Now</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-              {nowItems.map((item, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <span className="text-lg">{item.emoji}</span>
-                  <div className="space-y-1">
-                    <span className="font-medium text-sm">{item.label}: </span>
-                    <span className="text-sm text-muted-foreground">{item.description}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

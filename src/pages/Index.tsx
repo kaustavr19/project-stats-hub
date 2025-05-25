@@ -6,6 +6,7 @@ import DifficultyChart from '@/components/DifficultyChart';
 import ContestStats from '@/components/ContestStats';
 import GitHubStats from '@/components/GitHubStats';
 import ProjectShowcase from '@/components/ProjectShowcase';
+import LiveProjects from '@/components/LiveProjects';
 import Now from '@/components/Now';
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
       <ContestStats />
       <GitHubStats />
       <ProjectShowcase />
+      <LiveProjects />
       <Now />
       
       <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t">
